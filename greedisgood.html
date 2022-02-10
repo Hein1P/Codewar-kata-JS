@@ -1,0 +1,24 @@
+<html>
+    <script>
+function score( dice ) {
+  var dc = [0,0,0,0,0,0];
+  var tdr = [1000,200,300,400,500,600];
+  var sdr = [100,0,0,0,50,0];
+  dice.forEach(function(x){ dc[x-1]++; });
+  console.log(dc)
+  return dc.reduce(function(s,x,i){ 
+    return s + (x >= 3? tdr[i] : 0) + sdr[i]*(x % 3);
+  },0);
+}
+// let s = 0;
+// for (let i = 0; i < dc.length; i++) {
+//       // ternary operator replaced to make it iffy.
+//       if (dc[i] >= 3) {
+//         s = s + tdr[i]; // if there are triplets, add their respective amonts to the sum (s)
+//        }
+//        s = s + sdr[i]*(dc[i] % 3); // modulo 3 will make sure we substract three, if possible. Then as per sdr, we add 100 or 50 to the sum.
+// }
+// return s
+console.log(score( [1,1,1, 3, 3] ))
+    </script>
+</html>

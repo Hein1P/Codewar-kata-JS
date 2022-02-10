@@ -1,0 +1,20 @@
+<html>    
+    <script>
+        function rowSumOddNumbers(n) {
+ let sn = 0;
+  for (let i=0;i<n;i++){
+    sn += i;
+  }
+ let start = sn *2 +1;
+ let sum =0;
+ for (let i=0;i<n;i++){
+    sum +=start
+    start += 2
+   
+  }
+
+return sum;
+}
+console.log(rowSumOddNumbers(30))
+    </script>
+</html>

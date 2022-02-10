@@ -1,0 +1,30 @@
+<html>
+    <script>
+function queueTime(customers, n) {
+  
+  // Make an array containing n amount of elements, 
+  // n representing the number of tills, 
+  // and fill with zeroes
+  var tills = new Array(n).fill(0);
+    console.log("tills", tills)
+  // Iterate through the customers 
+  for (let time of customers) {
+
+    // Find the till that has the least time
+    let idx = tills.indexOf(Math.min(...tills));
+    console.log("index", idx)
+    // Add the time, representing the customer to
+    // the till that has the least time
+    tills[idx] += time; 
+    console.log("time", time)
+    console.log("tills", tills)
+  }
+
+  // Return the till that has the longest wait time
+  // This is the required time to get all customers
+  // through the que.
+  return Math.max(...tills);
+}
+console.log(queueTime([28,2,28,50,3,38,19,8,46,10] , 5))
+    </script>
+</html>

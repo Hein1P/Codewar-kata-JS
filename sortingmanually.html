@@ -1,0 +1,18 @@
+<html>
+    <script>
+        let arr = [4,2,100,30,11,9]
+        for (let i = 0; i < arr.length-1;i++)
+        {   
+            minIndex = i;
+            for (let j = i; j < arr.length;j++){
+                if(arr[minIndex] > arr[j]){
+                    minIndex = j;
+                }
+                let temp = arr[minIndex]
+                arr[minIndex] = arr[i]
+                arr[i] = temp
+            }
+        }
+        console.log(arr)
+    </script>
+</html>

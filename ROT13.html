@@ -1,0 +1,25 @@
+<html>
+  <script>
+    function rot13(str) {
+      let inarr =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ".split(
+          ""
+        );
+      let outarr =
+        "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm1234567890 ".split(
+          ""
+        );
+      let arr = str.split("");
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < inarr.length; j++) {
+          if (arr[i] == inarr[j]) {
+            arr[i] = outarr[j];
+            break;
+          }
+        }
+      }
+      return arr.join("");
+    }
+    console.log(rot13("EBG13 rknzcyr."));
+  </script>
+</html>

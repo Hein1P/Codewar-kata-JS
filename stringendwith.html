@@ -1,0 +1,23 @@
+<html>
+    <script>
+        let str ="abcdef";
+        let ending = "ef";
+        function solution(str, ending)
+        {
+           let arr = str.split("");
+           let arrend = ending.split("");
+           arr = arr.join("").slice(arr.length - arrend.length);
+           console.log(arr)
+           if (arr == ending)
+           {
+                return true;
+           }
+           else
+           {
+               return false;
+           }
+     
+        }
+        console.log(solution(str,ending));
+    </script>
+</html>

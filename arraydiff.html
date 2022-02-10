@@ -1,0 +1,21 @@
+<html>
+  <script>
+    function arrayDiff(a, b) {
+      if (b == [] || a == []) {
+        return a;
+      }
+      for (let i = 0; i < b.length; i++) {
+        console.log("1", "a", a, "b[i]", b[i]);
+        a = a.filter((x) => x != b[i]);
+        console.log("2", "a", a, "b[i]", b[i]);
+      }
+      return a;
+    }
+    console.log(
+      arrayDiff(
+        [-5, 3, 4, 19, -13, -11, 4, 19, -7, -8, -13, -7],
+        [-11, -13, -7, -13, 19, -8, -7, -5, 3, 19]
+      )
+    );
+  </script>
+</html>

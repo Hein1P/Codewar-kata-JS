@@ -1,0 +1,29 @@
+<html>
+    <script>
+        function formatDuration (seconds) {
+  // Complete this function
+  let arr =[];
+  let result = 0;
+  let sec = seconds % 60;
+  arr.push(sec);
+  let min = (seconds-sec)/60;
+  let hour = 0;
+  if (min >=60)
+    {
+      arr.push((seconds-sec)%60);
+      hour = min/60;
+    }
+
+if (arr.length == 1){
+    if(arr[0] == 1){
+        str= arr[0] + ' second';
+    }
+    else
+    {
+        str= arr[0] + ' seconds'
+    }
+}
+}
+
+    </script>
+</html>

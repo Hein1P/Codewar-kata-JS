@@ -1,0 +1,21 @@
+<html>
+    <script>
+function towerBuilder(nFloors) {
+  let a = ' ';
+  let result = '';
+  let arr =[];
+  let x =1;
+
+  for (let i=nFloors;i > 0;i--){
+    
+    result = a.repeat(i-1)+ '*'.repeat(x)+a.repeat(i-1)
+    x+=2;
+    console.log('x',x)
+    arr.push(result);
+  }
+  console.log(arr)
+  return arr
+}
+console.log(towerBuilder(2))
+    </script>
+</html>

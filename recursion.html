@@ -1,0 +1,22 @@
+<html>
+    <script>
+function rangeOfNumbers(startNum, endNum) {
+  if(startNum < endNum){
+    let arr = rangeOfNumbers(startNum,endNum-1);
+    
+    console.log(endNum)
+    arr.push(endNum);
+    return arr;
+  }
+  else if (startNum === endNum){
+    let arr =[];
+    arr.push(startNum)
+    return arr;
+  }
+  return []
+};
+console.log(rangeOfNumbers(10,20))
+
+
+    </script>
+</html>

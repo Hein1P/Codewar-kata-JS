@@ -1,0 +1,17 @@
+<html>
+    <script>
+function validatePIN (pin) {
+  let result = pin.split('').map(a=> a==Number(a));
+  if (result.length == 4 || result.length == 6 && result.every(a=>a==true))
+    {
+      return true
+    }
+  else{
+    return false
+  }
+
+}
+console.log(validatePIN('-12345'))
+
+    </script>
+</html>

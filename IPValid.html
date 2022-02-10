@@ -1,0 +1,9 @@
+<html>
+    <script>
+function isValidIP(str) {
+  return str.split('.').filter((v) => v==Number(v).toString() && Number(v) < 256 && Number(v) >=0).length ==4;
+  
+}
+console.log(isValidIP("01.02.03.04"))
+    </script>
+</html>

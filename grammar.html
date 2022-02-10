@@ -1,0 +1,21 @@
+<html>
+  <script>
+    var a = 10;
+    console.log("A is", a);
+
+    var arr = [10, 5, 20, 30, 100, 4];
+    /*let max = arr[0];
+        for (let i=1;i<arr.length;i++)
+        {
+            if (max < arr[i])
+            {
+                max = arr[i]
+            }
+        }
+        console.log("max",max)*/
+    max = Math.max.apply(Math, arr);
+    console.log("max1", max);
+    max = Math.max(...arr);
+    console.log(max);
+  </script>
+</html>

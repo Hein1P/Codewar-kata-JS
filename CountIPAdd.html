@@ -1,0 +1,17 @@
+<html>
+  <script>
+    function ipsBetween(start, end) {
+      let sta = start.split(".").map((x) => Number(x));
+      let en = end.split(".").map((x) => Number(x));
+      let stares = parseInt(
+        sta[0] * 256 * 256 * 256 + sta[1] * 256 * 256 + sta[2] * 256 + sta[3]
+      );
+      let enres = parseInt(
+        en[0] * 256 * 256 * 256 + en[1] * 256 * 256 + en[2] * 256 + en[3]
+      );
+      console.log(enres - stares + 1);
+      return enres - stares;
+    }
+    ipsBetween("20.0.0.10", "20.0.1.0");
+  </script>
+</html>
