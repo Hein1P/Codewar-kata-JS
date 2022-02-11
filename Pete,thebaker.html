@@ -1,0 +1,43 @@
+<html>
+  <script>
+    function cakes(recipe, available) {
+      recipe = Object.entries(recipe);
+      available = Object.entries(available);
+      let result = [];
+      if (recipe.length > available.length) {
+        return 0;
+      }
+      for (let i = 0; i < recipe.length; i++) {
+        for (let j = 0; j < available.length; j++) {
+          if (recipe[i][0] == available[j][0]) {
+            if (recipe[i][1] == 0) {
+              break;
+            } else {
+              result.push(parseInt(available[j][1] / recipe[i][1]));
+            }
+          }
+        }
+      }
+      return Math.min(...result);
+    }
+
+    cakes(
+      { cocoa: 11, nuts: 46, oil: 0 },
+      {
+        eggs: 10000,
+        nuts: 9500,
+        pears: 800,
+        milk: 2500,
+        sugar: 5100,
+        chocolate: 9800,
+        oil: 9600,
+        apples: 300,
+        flour: 9300,
+        cream: 7500,
+        cocoa: 1100,
+        butter: 900,
+        crumbles: 8800,
+      }
+    );
+  </script>
+</html>
