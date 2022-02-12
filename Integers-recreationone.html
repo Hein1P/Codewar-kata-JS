@@ -1,0 +1,24 @@
+<html>
+  <script>
+    function listSquared(m, n) {
+      let result = [];
+
+      for (let i = m; i <= n; i++) {
+        let divisor = [];
+        let j = 0;
+        for (j = 1; j <= i; j++) {
+          if (i % j == 0) {
+            divisor.push(j);
+          }
+        }
+        divisor = divisor.map((x) => x * x).reduce((a, b) => a + b);
+        let squareroot = Math.sqrt(divisor);
+        if (divisor % squareroot == 0) {
+          result.push([j - 1, divisor]);
+        }
+      }
+      return result;
+    }
+    console.log(listSquared(1, 250));
+  </script>
+</html>
