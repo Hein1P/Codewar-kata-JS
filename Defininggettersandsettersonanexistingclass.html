@@ -1,0 +1,27 @@
+<html>
+  <script>
+    class Person {
+      constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+      }
+      getName() {
+        //console.log(this.firstName + " " + this.lastName);
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    Object.defineProperty(Person.prototype, "name", {
+      get() {
+        return this.getName();
+      },
+      set(n) {
+        this.firstName = n.split(" ")[0];
+        this.lastName = n.split(" ")[1];
+      },
+    });
+
+    let marcusFenix = new Person("Marcus", "Fenix");
+    console.log((marcusFenix.name = "Hein Thu"));
+  </script>
+</html>

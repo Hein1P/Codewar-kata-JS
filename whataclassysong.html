@@ -1,0 +1,28 @@
+<html>
+  <script>
+    class Song {
+      constructor(title, artist) {
+        this.title = title;
+        this.artist = artist;
+        this.result = [];
+      }
+
+      howMany(arr) {
+        let count = 0;
+        console.log(this.result);
+        for (let i in arr) {
+          if (!this.result.includes(arr[i].toLowerCase())) {
+            this.result.push(arr[i].toLowerCase());
+            count++;
+          }
+        }
+        console.log(count);
+        return count;
+      }
+    }
+
+    const mountMoose = new Song("Mount Moose", "The Snazzy Moose");
+    mountMoose.howMany(["John", "Fred", "BOb", "carl", "RyAn"]);
+    mountMoose.howMany(["john", "luke", "amanda"]);
+  </script>
+</html>
