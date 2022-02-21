@@ -1,0 +1,38 @@
+<html>
+  <script>
+    function solution(list) {
+      let arr = [];
+      let string = "";
+      for (let i = 0; i < list.length; i++) {
+        if (arr.length == 0) {
+          arr.push(list[i]);
+        } else if (arr[arr.length - 1] + 1 == list[i]) {
+          arr.push(list[i]);
+        } else {
+          if (arr.length > 2) {
+            let str = arr[0] + "-" + arr[arr.length - 1] + ",";
+            string += str;
+          } else {
+            string += arr.join(",") + ",";
+          }
+          arr = [];
+          arr.push(list[i]);
+        }
+      }
+      if (arr.length > 2) {
+        let str = arr[0] + "-" + arr[arr.length - 1];
+        string += str;
+      } else {
+        string += arr.join(",");
+      }
+      console.log(typeof string);
+      return string;
+    }
+    console.log(
+      solution([
+        -77, -75, -73, -72, -69, -67, -64, -61, -60, -58, -56, -53, -52, -49,
+        -47,
+      ])
+    );
+  </script>
+</html>
